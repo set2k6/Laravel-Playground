@@ -18,7 +18,8 @@ Route::get('/', function () {
 
 //this gets and 'uses' the newly made UsersController at the index.
 Route::get('users', ['uses' => 'UsersController@index']);
-
+Route::get('users/create', ['uses' => 'UsersController@create']);
+Route::post('users', ['uses' => 'UsersController@store']);
 //below does the same as the above function, just longer.
 /*
 Route::get('users', function () {
